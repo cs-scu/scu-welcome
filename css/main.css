@@ -103,7 +103,7 @@ h6 .bi {
     width: 100%;
     min-height: 80px; /* Replaced height: 100% for a boxier look */
     padding: 0.75rem 0.5rem;
-    font-size: 0.8rem; /* Smaller font for small boxes */
+    font-size: 0.95rem; /* MODIFIED: Increased font size */
     font-weight: 500;
     text-align: center;
     color: var(--action-blue);
