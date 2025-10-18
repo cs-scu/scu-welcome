@@ -14,16 +14,10 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg shadow-sm">
-        <div class="container justify-content-center">
-            <a class="navbar-brand" href="#">دانشگاه</a>
-        </div>
-    </nav>
-
     <header class="header-main text-center pt-4 pb-4 mb-4">
         <div class="container">
-            <h1 class="display-5">به دانشگاه ما خوش آمدید</h1>
-            <p class="lead mb-0">راهنمای دانشجویان جدیدالورود</p>
+            <h1 class="display-5">سلام نودانشجوی عزیز!</h1>
+            <p class="lead mb-0">راهنمای شروع تحصیل در دانشگاه</p>
         </div>
     </header>
 
@@ -34,23 +28,61 @@
                     
                     <div class="card shadow-sm mb-4">
                         <div class="card-body p-3">
-                            <h5 class="card-title mb-2">
-                                <i class="bi bi-telegram"></i> کانال‌های تلگرام
-                            </h5>
-                            <p class="card-text mb-3">کانال‌های اطلاع‌رسانی گروه‌های آموزشی</p>
+                            <h5 class="card-title mb-2"><i class="bi bi-people-fill"></i> انجمن‌های علمی</h5>
+                            <p class="card-text mb-3">کانال‌های رسمی اطلاع‌رسانی و ارتباطی</p>
                             
                             <div class="row g-2 mt-2">
                                 <div class="col-6">
-                                    <a href="https://t.me/scu_cs" class="grid-btn" target="_blank">انجمن کامپیوتر</a>
+                                    <div class="assoc-group" id="assoc-group-cs">
+                                        <div class="assoc-header">
+                                            <img src="cs.webp" class="assoc-logo" alt="لوگو کامپیوتر">
+                                            <span class="assoc-title">
+                                                <small>انجمن علمی دانشجویی</small>
+                                                علوم کامپیوتر
+                                            </span>
+                                        </div>
+                                        <div class="assoc-link-list">
+                                            <a href="https://t.me/scu_cs" class="assoc-link-bar" target="_blank">
+                                                <i class="bi bi-telegram"></i>
+                                                <span>تلگرام</span>
+                                                <i class="bi bi-chevron-left"></i>
+                                            </a>
+                                            <a href="https://instagram.com/scu_cs" class="assoc-link-bar" target="_blank">
+                                                <i class="bi bi-instagram"></i>
+                                                <span>اینستاگرام</span>
+                                                <i class="bi bi-chevron-left"></i>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
+                    
                                 <div class="col-6">
-                                    <a href="https://t.me/math_scuanjom" class="grid-btn" target="_blank">انجمن ریاضی</a>
+                                    <div class="assoc-group" id="assoc-group-math">
+                                        <div class="assoc-header">
+                                            <img src="math.webp" class="assoc-logo" alt="لوگو ریاضی">
+                                            <span class="assoc-title">
+                                                <small>انجمن علمی دانشجویی</small>
+                                                ریاضیات و کاربرد ها
+                                            </span>
+                                        </div>
+                                        <div class="assoc-link-list">
+                                            <a href="https://t.me/math_scuanjom" class="assoc-link-bar" target="_blank">
+                                                <i class="bi bi-telegram"></i>
+                                                <span>تلگرام</span>
+                                                <i class="bi bi-chevron-left"></i>
+                                            </a>
+                                            <a href="https://instagram.com/math_scu" class="assoc-link-bar" target="_blank">
+                                                <i class="bi bi-instagram"></i>
+                                                <span>اینستاگرام</span>
+                                                <i class="bi bi-chevron-left"></i>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="card card-help shadow-sm mb-4">
+                    <div class="card card-help shadow-sm mb-4" data-bs-toggle="modal" data-bs-target="#helpModal">
                         <div class="card-body p-3 text-center">
                             <h5 class="card-title mb-0">نیاز به راهنمایی دارید؟ <i class="bi bi-telephone-fill"></i></h5>
                         </div>
@@ -59,72 +91,197 @@
                     <div class="card shadow-sm mb-4">
                         <div class="card-body p-3">
                             <h5 class="card-title mb-2">
-                                <i class="bi bi-mortarboard-fill"></i> امور آموزشی و دانشکده‌ها
+                                <i class="bi bi-window-stack"></i> سامانه‌های مهم دانشگاه
                             </h5>
-                            <p class="card-text mb-3">سامانه ثبت‌نام و نقشه دانشکده‌ها.</p>
-                            <a href="http://reg.scu.ac.ir" class="btn btn-primary mt-2 px-4" target="_blank">سامانه آموزش (reg)</a>
-
-                            <hr>
-                            <h6 class="mt-3 mb-2"><i class="bi bi-geo-alt-fill"></i> نقشه دانشکده‌ها</h6>
-                            <div class="row g-2 mt-2">
-                                <div class="col-4">
-                                    <a href="https://nshn.ir/basbk4zJPBYEQ0" class="grid-btn" target="_blank">علوم ریاضی و کامپیوتر</a>
-                                </div>
-                                <div class="col-4">
-                                    <a href="https://nshn.ir/sbkOSkWBYhE3" class="grid-btn" target="_blank">علوم</a>
-                                </div>
-                                <div class="col-4">
-                                    <a href="https://nshn.ir/0asbk4lbeBYb1h" class="grid-btn" target="_blank">ادبیات و علوم انسانی</a>
-                                </div>
+                            <p class="card-text mb-3">لینک‌های پرکاربرد دانشجویی.</p>
+                            <div class="link-list-container">
+                                <a href="https://scu.ac.ir/" class="assoc-link-bar link-list-item" target="_blank">
+                                    <i class="bi bi-globe"></i>
+                                    <span>سایت اصلی دانشگاه</span>
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
+                                <a href="https://reg.scu.ac.ir/" class="assoc-link-bar link-list-item" target="_blank">
+                                    <i class="bi bi-journal-text"></i>
+                                    <span>سامانه هم‌آوا (آموزش)</span>
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
+                                <a href="https://lms.scu.ac.ir/" class="assoc-link-bar link-list-item" target="_blank">
+                                    <i class="bi bi-laptop"></i>
+                                    <span>آموزش مجازی (LMS)</span>
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
+                                <a href="https://elib.scu.ac.ir/" class="assoc-link-bar link-list-item" target="_blank">
+                                    <i class="bi bi-book-half"></i>
+                                    <span>کتابخانه دیجیتال</span>
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
+                                <a href="https://food.scu.ac.ir/" class="assoc-link-bar link-list-item" target="_blank">
+                                    <i class="bi bi-egg-fried"></i>
+                                    <span>سامانه رزرو غذا</span>
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
+                                <a href="https://refah.swf.ir/" class="assoc-link-bar link-list-item" target="_blank">
+                                    <i class="bi bi-cash-stack"></i>
+                                    <span>سامانه رفاه (وام)</span>
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
+                                <a href="https://kheradcullinan.scu.ac.ir/" class="assoc-link-bar link-list-item" target="_blank">
+                                    <i class="bi bi-house-door-fill"></i>
+                                    <span>سامانه خرد (خوابگاه)</span>
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
-
                     <div class="card shadow-sm mb-4">
                         <div class="card-body p-3">
                             <h5 class="card-title mb-2">
-                                <i class="bi bi-house-door-fill"></i> خوابگاه‌ها و امور دانشجویی
+                                <i class="bi bi-geo-alt-fill"></i> نقشه اماکن مهم دانشگاه
                             </h5>
-                            <p class="card-text mb-3">سامانه‌های اصلی و نقشه‌های محل.</p>
-                            <div class="btn-group w-100" role="group">
-                                <a href="https://refah.swf.ir/" class="btn btn-primary px-3" target="_blank">سامانه رفاه</a>
-                                <a href="https://kheradcullinan.scu.ac.ir/" class="btn btn-secondary px-3" target="_blank">سامانه خرد</a>
-                            </div>
+                            <p class="card-text mb-3">مسیریابی اماکن پرکاربرد.</p>
                             
-                            <hr>
-                            <h6 class="mt-3 mb-2"><i class="bi bi-geo-alt-fill"></i> لینک‌های مرتبط</h6>
-                            <div class="row g-2 mt-2">
-                                <div class="col-4">
-                                    <a href="https://nshn.ir/ce7bkibNO5U6QF" class="grid-btn" target="_blank">معاونت دانشجویی</a>
-                                </div>
-                                <div class="col-4">
-                                    <a href="https://nshn.ir/70sbkioMN5U6T4" class="grid-btn" target="_blank">خوابگاه معصومه (س)</a>
-                                </div>
-                                <div class="col-4">
-                                    <a href="https://nshn.ir/087bk4uXN5U-im" class="grid-btn" target="_blank">خوابگاه علم الهدی</a>
-                                </div>
+                            <div class="link-list-container">
+                                <a href="https://nshn.ir/basbk4zJPBYEQ0" class="assoc-link-bar link-list-item" target="_blank">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <span>دانشکده علوم ریاضی و کامپیوتر</span>
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
+                                <a href="https://nshn.ir/2e_bkO89pBYhuS" class="assoc-link-bar link-list-item" target="_blank">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <span>دانشکده علوم (زیراکس)</span>
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
+                                <a href="https://nshn.ir/0a_bk4lbeBYb1h" class="assoc-link-bar link-list-item" target="_blank">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <span>دانشکده ادبیات و علوم انسانی (زیراکس)</span>
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
+                                <a href="https://nshn.ir/fc_bk4JZYBYYih" class="assoc-link-bar link-list-item" target="_blank">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <span>دانشکده پرستاری (زیراکس)</span>
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
+                                <a href="https://nshn.ir/ce7bkibNO5U6QF" class="assoc-link-bar link-list-item" target="_blank">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <span>معاونت ها (اداره تغذیه، مرکز بهداشت، امور خوابگاهی، زیراکس)</span>
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
+                                <a href="https://nshn.ir/_bkiByeBY_PH" class="assoc-link-bar link-list-item" target="_blank">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <span>ساختمان مرکزی و مرکز کامپیوتر</span>
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
+                                <a href="https://nshn.ir/_bkOYiW5UtME" class="assoc-link-bar link-list-item" target="_blank">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <span>کتابخانه مرکزی</span>
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
+                                <a href="https://nshn.ir/88_bk44k_BYHL2" class="assoc-link-bar link-list-item" target="_blank">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <span>سلف خلیج فارس</span>
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
+                                <a href="https://nshn.ir/98_bkOAlI5Uqqv" class="assoc-link-bar link-list-item" target="_blank">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <span>سلف مرکزی</span>
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
+                                <a href="https://nshn.ir/1c_bkixPeBYhXT" class="assoc-link-bar link-list-item" target="_blank">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <span>بانک ملی</span>
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
+                                <a href="https://nshn.ir/ea_bkibO0BY_O5" class="assoc-link-bar link-list-item" target="_blank">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <span>بانک تجارت</span>
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
+                                <a href="https://nshn.ir/70_bkioMN5U6T4" class="assoc-link-bar link-list-item" target="_blank">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <span>خوابگاه حضرت معصومه (خانم ها)</span>
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
+                                <a href="https://nshn.ir/08_bk4uXN5U-im" class="assoc-link-bar link-list-item" target="_blank">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                    <span>خوابگاه علم الهدی (آقایان)</span>
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
-                
-                    <div class="card shadow-sm mb-4">
-                        <div class="card-body p-3">
-                            <h5 class="card-title mb-2">
-                                <i class="bi bi-egg-fried"></i> تغذیه و سلف
-                            </h5>
-                            <p class="card-text mb-3">راهنمای رزرو غذا و استفاده از سامانه تغذیه.</p>
-                            <a href="http://food.scu.ac.ir/cullinan" class="btn btn-primary mt-2 px-4" target="_blank">سامانه تغذیه</a>
-                        </div>
                     </div>
-
-                </div>
             </div>
         </div>
     </main>
 
+    <div class="modal fade" id="helpModal" tabindex="-1" aria-labelledby="helpModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="helpModalLabel"><i class="bi bi-people-fill me-2"></i> پشتیبانی دانشجویی</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-center mb-3">ما هم روزی نودانشجو بودیم! اگر در فرآیند ثبت‌نام به مشکل خورده‌اید یا سوالی دارید، به ما پیام دهید.</p>
+                    
+                    <div class="student-support-list">
+                        <div class="student-card">
+                            <h6 class="student-name"><i class="bi bi-person-circle me-2 text-primary"></i> پژمان صدری نژاد</h6>
+                            <div class="student-tags">
+                                <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">پشتیبانی ثبت نام</span>
+                                <span class="badge bg-success-subtle text-success-emphasis rounded-pill">راهنمای کامپیوتر</span>
+                            </div>
+                            <a href="https://t.me/pejmansadrin" class="btn btn-contact" target="_blank">
+                                <i class="bi bi-telegram me-2"></i> @pejmansadrin
+                            </a>
+                        </div>
+                        
+                        <div class="student-card">
+                            <h6 class="student-name"><i class="bi bi-person-circle me-2 text-primary"></i> محمد صادقی</h6>
+                            <div class="student-tags">
+                                <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">پشتیبانی ثبت نام</span>
+                                <span class="badge bg-warning-subtle text-warning-emphasis rounded-pill">راهنمای ریاضی</span>
+                            </div>
+                            <a href="https://t.me/mohammad_sdgy" class="btn btn-contact" target="_blank">
+                                <i class="bi bi-telegram me-2"></i> @mohammad_sdgy
+                            </a>
+                        </div>
+
+                        <div class="student-card">
+                            <h6 class="student-name"><i class="bi bi-person-circle me-2 text-danger"></i> الناز دشتستانی</h6>
+                            <div class="student-tags">
+                                <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">پشتیبانی ثبت نام</span>
+                                <span class="badge bg-danger-subtle text-danger-emphasis rounded-pill">خوابگاه (دختران)</span>
+                            </div>
+                            <a href="https://t.me/elnazdashtestany" class="btn btn-contact" target="_blank">
+                                <i class="bi bi-telegram me-2"></i> @elnazdashtestany
+                            </a>
+                        </div>
+
+                        <div class="student-card">
+                            <h6 class="student-name"><i class="bi bi-person-circle me-2 text-info"></i> محمد مهدی اشرف مدرس</h6>
+                            <div class="student-tags">
+                                <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill">پشتیبانی ثبت نام</span>
+                                <span class="badge bg-info-subtle text-info-emphasis rounded-pill">خوابگاه (پسران)</span>
+                            </div>
+                            <a href="https://t.me/Meehhtii" class="btn btn-contact" target="_blank">
+                                <i class="bi bi-telegram me-2"></i> @Meehhtii
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer class="footer p-3 mt-4">
         <div class="container">
-            <p class="mb-0">&copy; 1404 - تمامی حقوق برای دانشگاه محفوظ است.</p>
+            <p class="mb-1">Made with ❤️ for SCU students</p>
+            <p class="mb-0 developer-credits">
+                Developed by:
+                <a href="https://github.com/pejmansadrin" target="_blank">pejmansadrin</a>
+                |
+                <a href="https://github.com/Aryamk11" target="_blank">Aryamk11</a>
+            </p>
         </div>
     </footer>
 

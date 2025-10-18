@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap');
 
 :root {
-    --university-blue: #00274C; 
-    --action-blue: #004a99;       
+    --university-blue: #264653; /* MODIFIED: Dark Teal/Grey */
+    --action-blue: #2A9D8F;     /* MODIFIED: Brighter Teal for hover */
     --light-bg: #f0f2f5;         
     --white: #ffffff;            
     --dark-text: #212529;         
@@ -17,12 +17,14 @@ body {
     text-align: center; 
 }
 
-.navbar, .footer {
+/* REMOVED: Navbar styles */
+
+.footer { /* Footer keeps the theme color */
     background-color: var(--university-blue) !important; 
     color: var(--white) !important; 
 }
 
-.navbar-brand, .footer p {
+.footer p {
     color: var(--white) !important; 
 }
 
@@ -95,34 +97,19 @@ h6 .bi {
     color: var(--secondary-text);
 }
 
-/* NEW: Styles for the grid buttons */
-.grid-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    min-height: 80px; /* Replaced height: 100% for a boxier look */
-    padding: 0.75rem 0.5rem;
-    font-size: 0.95rem; /* MODIFIED: Increased font size */
-    font-weight: 500;
-    text-align: center;
-    color: var(--action-blue);
-    background-color: #f8f9fa;
-    border: 1px solid #dee2e6;
-    border-radius: .375rem;
-    text-decoration: none;
-    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
-}
-
-.grid-btn:hover {
-    background-color: #e9ecef;
-    color: var(--university-blue);
-}
+/* REMOVED: Grid Button Styles */
 
 
-/* Style for the "Need Help" card */
+/* MODIFIED: Style for the "Need Help" card */
 .card-help {
     background-color: var(--university-blue);
+    cursor: pointer; 
+    transition: transform 0.2s ease, box-shadow 0.2s ease; 
+}
+/* Hover effect for the help card */
+.card-help:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(38, 70, 83, 0.2); /* Shadow color matches new theme */
 }
 .card-help .card-title {
     color: var(--white);
@@ -132,4 +119,281 @@ h6 .bi {
     color: var(--white);
     font-size: 1rem;
     margin-inline-start: .5rem;
+}
+
+/* --- Association List Styles (Modern Curve) --- */
+
+/* Group container */
+.assoc-group {
+    border: 2px solid;
+    border-radius: .75rem; 
+    overflow: hidden;
+}
+
+/* Header part (Logo + Title) */
+.assoc-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+}
+
+.assoc-logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.assoc-title {
+    font-weight: 700;
+    font-size: 1.05rem; 
+    display: flex; 
+    flex-direction: column; 
+    line-height: 1.3; 
+    text-align: right; 
+}
+
+.assoc-title small {
+    font-size: 0.8rem;
+    font-weight: 400; 
+    opacity: 0.9;
+    display: block; 
+}
+
+/* List of links */
+.assoc-link-list {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    background-color: #f0f2f5; 
+}
+
+/* The "thin white bar" for associations, systems, locations */
+.assoc-link-bar {
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    border: 1px solid #dee2e6;
+    border-radius: .5rem; 
+    padding: 0.75rem;
+    margin-bottom: 0.35rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+.assoc-link-bar:last-child {
+    margin-bottom: 0;
+}
+
+.assoc-link-bar:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-color: #aaa;
+    transform: scale(1.01);
+}
+
+.assoc-link-bar .bi:first-child { 
+    font-size: 1.2rem;
+    margin-inline-end: 0.75rem;
+}
+.assoc-link-bar span { 
+    flex-grow: 1; 
+    text-align: right;
+    font-size: 0.95rem;
+}
+.assoc-link-bar .bi:last-child { 
+    font-size: 0.9rem;
+    opacity: 0.5;
+}
+
+/* --- Link List Styles (For Systems & Locations) --- */
+.link-list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem; 
+}
+.link-list-item {
+    color: var(--dark-text); /* Standard dark text */
+    font-weight: 500;
+}
+.link-list-item:hover {
+    color: var(--university-blue); /* Hover color matches theme */
+    border-color: var(--university-blue);
+}
+.link-list-item .bi:first-child { 
+    color: var(--university-blue); /* Icon color matches theme */
+}
+
+/* CS Colors */
+#assoc-group-cs {
+    border-color: #1a5c5d;
+}
+#assoc-group-cs .assoc-header {
+    background-color: #1a5c5d;
+    color: var(--white);
+}
+#assoc-group-cs .assoc-logo {
+    border-color: var(--white);
+}
+#assoc-group-cs .assoc-link-bar {
+    color: #1a5c5d;
+}
+#assoc-group-cs .assoc-link-bar:hover {
+    color: #1a5c5d;
+    border-color: #1a5c5d;
+}
+#assoc-group-cs .assoc-link-bar .bi:first-child { 
+    color: #1a5c5d;
+}
+
+/* Math Colors */
+#assoc-group-math {
+    border-color: #7B1FA2;
+}
+#assoc-group-math .assoc-header {
+    background-color: #7B1FA2;
+    color: var(--white);
+}
+#assoc-group-math .assoc-logo {
+    border-color: var(--white);
+}
+#assoc-group-math .assoc-link-bar {
+    color: #7B1FA2;
+}
+#assoc-group-math .assoc-link-bar:hover {
+    color: #7B1FA2;
+    border-color: #7B1FA2;
+}
+#assoc-group-math .assoc-link-bar .bi:first-child { 
+    color: #7B1FA2;
+}
+
+/* --- END: Association List Styles --- */
+
+/* REMOVED: Map Container Styles */
+
+/* --- MODIFIED: Modal Styles (Student Card Layout) --- */
+.modal-header {
+    border-bottom: 2px solid #e0e0e0;
+}
+.modal-header .modal-title {
+    color: var(--university-blue);
+    font-weight: 700;
+}
+
+/* NEW Student Card Styles */
+.student-support-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.student-card {
+    border: 1px solid #dee2e6;
+    border-radius: .5rem;
+    padding: 1rem;
+    text-align: right;
+    background-color: var(--white);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+}
+.student-name {
+    font-weight: 700;
+    color: var(--dark-text);
+    margin-bottom: 0.5rem;
+}
+.student-name .bi {
+    vertical-align: text-bottom;
+}
+.student-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-bottom: 0.75rem;
+}
+.btn-contact {
+    background-color: var(--university-blue);
+    color: var(--white);
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
+.btn-contact:hover {
+    background-color: var(--action-blue);
+    color: var(--white);
+}
+/* --- END: Modal Styles --- */
+
+
+/* --- Mobile Responsive --- */
+@media (max-width: 767.98px) {
+    /* Stack association header on tablets and phones */
+    .assoc-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .assoc-title {
+        text-align: center; 
+    }
+}
+
+/* Font size reduction for very small screens */
+@media (max-width: 400px) {
+    .display-5 {
+        font-size: 2.25rem; 
+    }
+    .lead {
+        font-size: 1rem; 
+    }
+    .card-title {
+        font-size: 1.15rem; 
+    }
+    /* MODIFIED: Reduce font for link lists too */
+    .assoc-link-bar span, .link-list-item span {
+        font-size: 0.85rem; 
+    }
+    .assoc-link-bar, .link-list-item {
+        padding: 0.6rem 0.65rem; /* Slightly reduce padding */
+    }
+
+    
+    /* Reduce association card fonts */
+    .assoc-title {
+        font-size: 0.95rem;
+    }
+    .assoc-title small {
+        font-size: 0.75rem;
+    }
+
+
+    /* Reduce modal font */
+    .student-name {
+        font-size: 0.95rem;
+    }
+    .student-tags .badge {
+        font-size: 0.7rem;
+    }
+    .btn-contact {
+        font-size: 0.9rem;
+    }
+}
+
+/* --- Footer Developer Credits --- */
+.developer-credits {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+.developer-credits a {
+    color: var(--white); /* White link color */
+    text-decoration: none;
+    font-weight: 500;
+}
+.developer-credits a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+/* Ensure main footer text is also white */
+.footer p {
+    color: var(--white) !important; 
 }
